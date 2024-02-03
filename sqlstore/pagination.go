@@ -2,7 +2,7 @@ package sqlstore
 
 import (
 	"errors"
-	"github.com/aredcomet/go-gears.git/utils"
+	"github.com/aredcomet/go-gears/utils"
 	"github.com/sirupsen/logrus"
 	"net/http"
 
