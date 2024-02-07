@@ -18,6 +18,11 @@ type PageParams struct {
 	Cursor string `schema:"cursor"`
 }
 
+type PaginatorList struct {
+	Pagination paginator.Cursor `json:"pagination"`
+	Data       interface{}      `json:"data"`
+}
+
 func (p *PageParams) AsPaginator(paginatorFunc func(paginator.Cursor, *paginator.Order, *int) *paginator.Paginator) *paginator.Paginator {
 	cursor := paginator.Cursor{After: &p.Cursor}
 	limit := p.Limit
